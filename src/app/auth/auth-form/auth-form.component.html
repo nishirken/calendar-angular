@@ -1,0 +1,23 @@
+<div class="form">
+    <app-input
+        class="input" 
+        placeholder="email"
+        type="email"
+        [error]="emailErrorMessage"
+        [value]="emailControl.value ?? ''"
+        (onInput)="handleEmailChange($event)"
+    ></app-input>
+    <app-input
+        class="input"
+        placeholder="password"
+        type="password"
+        [error]="passwordErrorMessage"
+        [value]="passwordControl.value ?? ''"
+        (onInput)="handlePasswordChange($event)"
+    ></app-input>
+    <wired-button [disabled]="isButtonDisabled" class="button" (click)="handleSubmit()">{{ buttonText }}</wired-button>
+    <div class="hint">
+        {{ hintText }}
+        <wired-link [href]="href" [routerLink]="hintLinkHref" (click)="handleLinkClick($event)" class="hint-link">{{ hintLinkText }}</wired-link>
+    </div>
+</div>

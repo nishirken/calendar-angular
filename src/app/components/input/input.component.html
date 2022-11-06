@@ -1,0 +1,4 @@
+<div class="host">
+    <wired-input class="input" [placeholder]="placeholder" [type]="type" (input)="handleInput($event)"></wired-input>
+    <div *ngIf="error" class="error">{{ error }}</div>
+</div>
