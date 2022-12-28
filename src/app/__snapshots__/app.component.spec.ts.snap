@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent Renders 1`] = `
+<app-root
+  __ngContext__="0"
+>
+  <router-outlet />
+</app-root>
+`;

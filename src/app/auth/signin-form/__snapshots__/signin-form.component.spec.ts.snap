@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SigninFormComponent Renders 1`] = `
+<app-signin-form
+  __ngContext__="0"
+  authApiService={[Function AuthApiService]}
+  buttonText={[Function String]}
+  emailControl={[Function FormControl2]}
+  emailErrorMessage=""
+  handleLinkClick={[Function Function]}
+  handleSubmit={[Function Function]}
+  hintLinkHref={[Function String]}
+  hintLinkText={[Function String]}
+  hintText={[Function String]}
+  href={[Function String]}
+  passwordControl={[Function FormControl2]}
+  passwordErrorMessage=""
+  router={[Function Router]}
+  submit={[Function Function]}
+  testIds={[Function Object]}
+>
+  <div
+    class="form"
+    data-test-id="signin-form"
+  >
+    <app-input
+      class="input"
+      placeholder="email"
+      type="email"
+    >
+      <div
+        class="host"
+      >
+        <wired-input
+          class="input"
+          data-test-id="signin-form-email-input"
+        />
+      </div>
+    </app-input>
+    <app-input
+      class="input"
+      placeholder="password"
+      type="password"
+    >
+      <div
+        class="host"
+      >
+        <wired-input
+          class="input"
+          data-test-id="signin-form-password-input"
+        />
+      </div>
+    </app-input>
+    <wired-button
+      class="button"
+      data-test-id="signin-form-submit-button"
+    >
+       Sign in 
+    </wired-button>
+    <div
+      class="hint"
+    >
+       Do not have an account yet? 
+      <wired-link
+        class="hint-link"
+        data-test-id="signin-form-link"
+      >
+         Sign up 
+      </wired-link>
+    </div>
+  </div>
+</app-signin-form>
+`;

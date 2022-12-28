@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputComponent Renders 1`] = `
+<app-input
+  __ngContext__="0"
+  error=""
+  onInput={[Function EventEmitter_]}
+  placeholder={[Function String]}
+  type={[Function String]}
+  value={[Function String]}
+>
+  <div
+    class="host"
+  >
+    <wired-input
+      class="input"
+    />
+  </div>
+</app-input>
+`;
+
+exports[`InputComponent Renders with an error 1`] = `
+<app-input
+  __ngContext__={[Function Number]}
+  error={[Function String]}
+  onInput={[Function EventEmitter_]}
+  placeholder={[Function String]}
+  type={[Function String]}
+  value={[Function String]}
+>
+  <div
+    class="host"
+  >
+    <wired-input
+      class="input"
+    />
+    <div
+      class="error"
+    >
+      Error
+    </div>
+  </div>
+</app-input>
+`;

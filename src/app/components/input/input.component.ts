@@ -6,8 +6,6 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./input.component.sass']
 })
 export class InputComponent {
-  constructor() {}
-
   @Input() value= "";
   @Input() placeholder = "";
   @Input() error = "";
@@ -16,8 +14,4 @@ export class InputComponent {
   @Input() errorTestId?: string;
 
   @Output() onInput = new EventEmitter<Event>();
-
-  handleInput = (event: Event) => {
-    this.onInput.emit(event);
-  };
 }
