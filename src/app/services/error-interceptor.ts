@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { catchError, Observable, throwError } from "rxjs";
 import { RoutePath } from "../app-routing.module";
 
+// catch unauthorized error and redirect to Signin
 @Injectable({
     providedIn: 'root',
 })

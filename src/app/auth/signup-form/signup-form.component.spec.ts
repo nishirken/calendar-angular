@@ -1,14 +1,20 @@
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AuthApiService } from '../../services/auth-api/auth-api.service';
+import { AuthApiService as AuthApiServiceStub } from '../../services/auth-api/__mocks__/auth-api.service';
 
 import { SignupFormComponent } from './signup-form.component';
 
 describe('SignupFormComponent', () => {
   let component: SignupFormComponent;
   let fixture: ComponentFixture<SignupFormComponent>;
+  let authApiService = new AuthApiServiceStub();
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SignupFormComponent ]
+      declarations: [ SignupFormComponent ],
+      providers: [ { provide: AuthApiService, useValue: AuthApiServiceStub } ],
+      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
     })
     .compileComponents();
 
@@ -18,6 +24,6 @@ describe('SignupFormComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(fixture).toMatchSnapshot();
   });
 });

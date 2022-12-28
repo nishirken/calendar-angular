@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WeekComponent Renders 1`] = `
+<app-week
+  __ngContext__="0"
+  testIds={[Function Object]}
+  userApiService={[Function UserApiService]}
+>
+  <div
+    data-test-id="week"
+  >
+    <p>
+      week works!
+    </p>
+  </div>
+</app-week>
+`;
