@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { signinFormTestIds } from 'calendar-test-ids';
 import { RoutePath } from '../../app-routing.module';
 import { ApiError } from '../../services/api.interfaces';
 import { AuthCreds, SigninErrorCode } from '../../services/auth-api/auth-api.interfaces';
@@ -22,6 +23,7 @@ export class SigninFormComponent extends AuthFormComponent {
   override hintText = "Do not have an account yet?";
   override hintLinkText = "Sign up";
   override hintLinkHref = "/auth/signup";
+  override testIds = signinFormTestIds;
 
   override submit = (creds: AuthCreds) => {
     this.authApiService.signin(creds)

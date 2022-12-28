@@ -1,4 +1,4 @@
-<div class="form">
+<div class="form" [attr.data-test-id]="testIds?.root ?? ''">
     <app-input
         class="input" 
         placeholder="email"
@@ -6,6 +6,8 @@
         [error]="emailErrorMessage"
         [value]="emailControl.value ?? ''"
         (onInput)="handleEmailChange($event)"
+        [testId]="testIds?.emailInput ?? ''"
+        [errorTestId]="testIds?.emailError ?? ''"
     ></app-input>
     <app-input
         class="input"
@@ -14,10 +16,27 @@
         [error]="passwordErrorMessage"
         [value]="passwordControl.value ?? ''"
         (onInput)="handlePasswordChange($event)"
+        [testId]="testIds?.passwordInput ?? ''"
+        [errorTestId]="testIds?.passwordError ?? ''"
     ></app-input>
-    <wired-button [disabled]="isButtonDisabled" class="button" (click)="handleSubmit()">{{ buttonText }}</wired-button>
+    <wired-button
+        class="button"
+        [disabled]="isButtonDisabled"
+        (click)="handleSubmit()"
+        [attr.data-test-id]="testIds?.submitButton ?? ''"
+    >
+        {{ buttonText }}
+    </wired-button>
     <div class="hint">
         {{ hintText }}
-        <wired-link [href]="href" [routerLink]="hintLinkHref" (click)="handleLinkClick($event)" class="hint-link">{{ hintLinkText }}</wired-link>
+        <wired-link
+            [href]="href"
+            [routerLink]="hintLinkHref"
+            (click)="handleLinkClick($event)"
+            class="hint-link"
+            [attr.data-test-id]="testIds?.link ?? ''"
+        >
+            {{ hintLinkText }}
+        </wired-link>
     </div>
 </div>

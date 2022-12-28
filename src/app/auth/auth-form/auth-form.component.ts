@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { AuthCreds } from '../../services/auth-api/auth-api.interfaces';
+import { AuthFormTestIds } from 'calendar-test-ids';
 
 export const requiredMessage = 'The field can\'t be empty';
 
@@ -24,6 +25,8 @@ export class AuthFormComponent {
   passwordErrorMessage = '';
 
   href = '/'; // trigger link rerender, otherwise wired-link remains invisible
+
+  testIds?: AuthFormTestIds;
 
   handleLinkClick = (ev: MouseEvent): void => {
     ev.preventDefault();

@@ -12,6 +12,8 @@ export class InputComponent {
   @Input() placeholder = "";
   @Input() error = "";
   @Input() type = "";
+  @Input() testId?: string;
+  @Input() errorTestId?: string;
 
   @Output() onInput = new EventEmitter<Event>();
 
