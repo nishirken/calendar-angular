@@ -12,22 +12,15 @@ import 'wired-elements/lib/wired-input';
 import 'wired-elements/lib/wired-link';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
-    AuthModule,
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, HttpClientModule, AppRoutingModule, AuthModule],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ErrorCatchingInterceptor,
-      multi: true
-    }
+      multi: true,
+    },
   ],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

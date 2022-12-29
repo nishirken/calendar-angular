@@ -3,12 +3,10 @@ import { Observable } from 'rxjs';
 import { AuthCreds } from '../auth-api.interfaces';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class AuthApiService {  
+export class AuthApiService {
   signin = jest.fn<Observable<void>, [AuthCreds]>(() => new Observable());
 
   signup = jest.fn<Observable<void>, [AuthCreds]>(() => new Observable());
 }
-
-

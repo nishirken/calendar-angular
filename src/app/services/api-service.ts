@@ -6,28 +6,32 @@ import { RoutePath } from '../app-routing.module';
 import { ApiError } from './api.interfaces';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
   constructor(private http: HttpClient, private router: Router) {}
 
   post(...args: Parameters<HttpClient['post']>) {
-    return this.http.post(...args).pipe(catchError((err) => {
+    return this.http.post(...args).pipe(
+      catchError((err) => {
         this.handleAuthError(err);
         return of(err);
-    }));
+      })
+    );
   }
 
   get(...args: Parameters<HttpClient['get']>) {
-    return this.http.get(...args).pipe(catchError((err) => {
+    return this.http.get(...args).pipe(
+      catchError((err) => {
         this.handleAuthError(err);
         return of(err);
-    }));
+      })
+    );
   }
 
   handleAuthError(err: ApiError<any, any>) {
     if (err.statusCode === 401) {
-        this.router.navigate([RoutePath.Signin]);
+      this.router.navigate([RoutePath.Signin]);
     }
   }
 }

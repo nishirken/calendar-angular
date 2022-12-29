@@ -2,7 +2,12 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { signupFormTestIds } from 'calendar-test-ids';
 import { RoutePath } from '../../app-routing.module';
-import { AuthCreds, PasswordInvalidErrorCode, SignupApiError, SignupErrorCode } from '../../services/auth-api/auth-api.interfaces';
+import {
+  AuthCreds,
+  PasswordInvalidErrorCode,
+  SignupApiError,
+  SignupErrorCode,
+} from '../../services/auth-api/auth-api.interfaces';
 import { AuthApiService } from '../../services/auth-api/auth-api.service';
 import { AuthFormComponent } from '../auth-form/auth-form.component';
 
@@ -16,10 +21,10 @@ export class SignupFormComponent extends AuthFormComponent {
     super();
   }
 
-  override buttonText = "Sign up";
-  override hintText = "Already have an account?";
-  override hintLinkText = "Sign in";
-  override hintLinkHref = "/auth/signin";
+  override buttonText = 'Sign up';
+  override hintText = 'Already have an account?';
+  override hintLinkText = 'Sign in';
+  override hintLinkHref = '/auth/signin';
   override testIds = signupFormTestIds;
 
   override submit = (creds: AuthCreds) => {

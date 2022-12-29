@@ -8,17 +8,9 @@ import { InputComponent } from '../components/input/input.component';
 import { AuthApiService } from '../services/auth-api/auth-api.service';
 
 @NgModule({
-  declarations: [
-    AuthFormComponent,
-    SigninFormComponent,
-    SignupFormComponent,
-    InputComponent,
-  ],
-  imports: [
-    CommonModule,
-    AppRoutingModule,
-  ],
+  declarations: [SigninFormComponent, SignupFormComponent, InputComponent],
+  imports: [CommonModule, AppRoutingModule],
   providers: [AuthApiService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AuthModule { }
+export class AuthModule {}

@@ -12,11 +12,10 @@ describe('SigninFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SigninFormComponent, InputComponent ],
-      providers: [ { provide: AuthApiService, useValue: apiServiceStub } ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-    })
-    .compileComponents();
+      declarations: [SigninFormComponent, InputComponent],
+      providers: [{ provide: AuthApiService, useValue: apiServiceStub }],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SigninFormComponent);
     component = fixture.componentInstance;
