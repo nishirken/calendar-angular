@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { signinFormTestIds } from 'calendar-test-ids';
-import { RoutePath } from '../../app-routing.module';
+import { RoutePath } from '../../route-path';
 import { ApiError } from '../../services/api.interfaces';
 import {
   AuthCreds,

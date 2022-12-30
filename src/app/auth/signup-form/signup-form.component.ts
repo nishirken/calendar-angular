@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { signupFormTestIds } from 'calendar-test-ids';
-import { RoutePath } from '../../app-routing.module';
+import { RoutePath } from '../../route-path';
 import {
   AuthCreds,
   PasswordInvalidErrorCode,
@@ -34,7 +34,7 @@ export class SignupFormComponent extends AuthFormComponent {
     });
   };
 
-  handleError = (error: SignupApiError) => {
+  private handleError = (error: SignupApiError) => {
     switch (error.error.code) {
       case SignupErrorCode.EmailInvalid:
         this.emailErrorMessage = `Invalid: ${error.error.data.reason}`;
@@ -52,10 +52,9 @@ export class SignupFormComponent extends AuthFormComponent {
             this.passwordErrorMessage = `Must have at least ${firstError.minLength} symbols`;
             break;
           case PasswordInvalidErrorCode.TooLong:
-            this.passwordErrorMessage = `Must have max ${firstError.maxLength} sybmols`;
+            this.passwordErrorMessage = `Must have max ${firstError.maxLength} symbols`;
             break;
           case PasswordInvalidErrorCode.ReqChars:
-            console.log(error.error);
             this.passwordErrorMessage = `Missing ${firstError.minimumAmount} ${firstError.characterCategory} symbols`;
             break;
           case PasswordInvalidErrorCode.InvalidChars:
