@@ -8,7 +8,7 @@ import {
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, Observable, throwError } from 'rxjs';
-import { RoutePath } from '../app-routing.module';
+import { RoutePath } from '../route-path';
 
 // catch unauthorized error and redirect to Signin
 @Injectable({
