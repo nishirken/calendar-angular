@@ -15,7 +15,7 @@ exports[`SigninFormComponent Renders 1`] = `
   href={[Function String]}
   passwordControl={[Function FormControl2]}
   passwordErrorMessage=""
-  router={[Function Router]}
+  router={[Function Object]}
   submit={[Function Function]}
   testIds={[Function Object]}
 >

@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SignupFormComponent should create 1`] = `
+exports[`SignupFormComponent Renders 1`] = `
 <app-signup-form
   __ngContext__="0"
-  authApiService={[Function Function]}
+  authApiService={[Function AuthApiService]}
   buttonText={[Function String]}
   emailControl={[Function FormControl2]}
   emailErrorMessage=""
