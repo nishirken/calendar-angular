@@ -44,12 +44,16 @@ export abstract class AuthFormComponent {
 
   handleEmailChange(event: Event) {
     this.emailErrorMessage = '';
-    this.emailControl.setValue((event.target as HTMLInputElement).value);
+    if ((event.target as HTMLInputElement)?.value !== undefined) {
+      this.emailControl.setValue((event.target as HTMLInputElement)?.value);
+    }
   }
 
   handlePasswordChange(event: Event) {
     this.passwordErrorMessage = '';
-    this.passwordControl.setValue((event.target as HTMLInputElement).value);
+    if ((event.target as HTMLInputElement)?.value !== undefined) {
+      this.passwordControl.setValue((event.target as HTMLInputElement)?.value);
+    }
   }
 
   get isButtonDisabled(): boolean {

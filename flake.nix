@@ -15,7 +15,6 @@
 
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [
-            nodePackages.typescript-language-server
             nodejs-16_x
           ];
         };
