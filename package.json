@@ -28,7 +28,8 @@
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "wired-elements": "^3.0.0-rc.6",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "calendar-header": "github:nishirken/calendar-header#master"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.2.7",

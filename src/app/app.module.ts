@@ -7,12 +7,15 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { ErrorCatchingInterceptor } from './services/error-interceptor';
 
-import 'wired-elements/lib/wired-button';
+if (!customElements.get('wired-button')) {
+  import('wired-elements/lib/wired-button');
+}
 import 'wired-elements/lib/wired-input';
 import 'wired-elements/lib/wired-link';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, HeaderComponent],
   imports: [BrowserModule, HttpClientModule, AppRoutingModule, AuthModule],
   providers: [
     {
