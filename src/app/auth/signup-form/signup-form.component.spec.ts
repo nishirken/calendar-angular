@@ -8,15 +8,14 @@ import { SignupFormComponent } from './signup-form.component';
 describe('SignupFormComponent', () => {
   let component: SignupFormComponent;
   let fixture: ComponentFixture<SignupFormComponent>;
-  let authApiService = new AuthApiServiceStub();
+  const authApiService = new AuthApiServiceStub();
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SignupFormComponent ],
-      providers: [ { provide: AuthApiService, useValue: AuthApiServiceStub } ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-    })
-    .compileComponents();
+      declarations: [SignupFormComponent],
+      providers: [{ provide: AuthApiService, useValue: AuthApiServiceStub }],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SignupFormComponent);
     component = fixture.componentInstance;

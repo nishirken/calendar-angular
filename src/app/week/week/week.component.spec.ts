@@ -7,15 +7,14 @@ import { WeekComponent } from './week.component';
 describe('WeekComponent', () => {
   let component: WeekComponent;
   let fixture: ComponentFixture<WeekComponent>;
-  let userApiServiceStub = new UserApiServiceStub();
+  const userApiServiceStub = new UserApiServiceStub();
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WeekComponent ],
-      providers: [ { provide: UserApiService, useValue: userApiServiceStub, } ],
-      schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
-    })
-    .compileComponents();
+      declarations: [WeekComponent],
+      providers: [{ provide: UserApiService, useValue: userApiServiceStub }],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WeekComponent);
     component = fixture.componentInstance;

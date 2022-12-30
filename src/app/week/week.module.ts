@@ -4,14 +4,8 @@ import { WeekComponent } from './week/week.component';
 import { UserApiService } from '../services/user-api/user-api.service';
 
 @NgModule({
-  declarations: [
-    WeekComponent
-  ],
-  imports: [
-    CommonModule
-  ],
-  providers: [
-    UserApiService,
-  ]
+  declarations: [WeekComponent],
+  imports: [CommonModule],
+  providers: [UserApiService],
 })
-export class WeekModule { }
+export class WeekModule {}
