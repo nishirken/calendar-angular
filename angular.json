@@ -113,5 +113,10 @@
         }
       }
     }
+  },
+  "cli": {
+    "cache": {
+      "enabled": false
+    }
   }
 }

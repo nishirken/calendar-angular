@@ -3,15 +3,17 @@
 exports[`WeekComponent Renders 1`] = `
 <app-week
   __ngContext__="0"
+  dateTimeService={[Function DateTimeService]}
+  route={[Function Object]}
+  routeParamMapSub={[Function SafeSubscriber]}
   testIds={[Function Object]}
   userApiService={[Function UserApiService]}
 >
   <div
+    class="root"
     data-test-id="week"
   >
-    <p>
-      week works!
-    </p>
+    <app-sidebar />
   </div>
 </app-week>
 `;

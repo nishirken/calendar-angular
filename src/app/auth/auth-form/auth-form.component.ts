@@ -1,4 +1,3 @@
-import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { AuthCreds } from '../../services/auth-api/auth-api.interfaces';
 import { AuthFormTestIds } from 'calendar-test-ids';

@@ -1,15 +1,14 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppRoutingModule } from '../app-routing.module';
-import { AuthFormComponent } from './auth-form/auth-form.component';
+import { AppRoutingModule } from '../routing/app-routing.module';
 import { SigninFormComponent } from './signin-form/signin-form.component';
 import { SignupFormComponent } from './signup-form/signup-form.component';
-import { InputComponent } from '../components/input/input.component';
 import { AuthApiService } from '../services/auth-api/auth-api.service';
+import { ComponentsModule } from '../components/components.module';
 
 @NgModule({
-  declarations: [SigninFormComponent, SignupFormComponent, InputComponent],
-  imports: [CommonModule, AppRoutingModule],
+  declarations: [SigninFormComponent, SignupFormComponent],
+  imports: [CommonModule, AppRoutingModule, ComponentsModule],
   providers: [AuthApiService],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

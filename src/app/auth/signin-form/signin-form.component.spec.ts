@@ -1,20 +1,11 @@
-import { CUSTOM_ELEMENTS_SCHEMA, DebugElement } from '@angular/core';
-import {
-  ComponentFixture,
-  fakeAsync,
-  flushMicrotasks,
-  TestBed,
-  tick,
-  waitForAsync,
-} from '@angular/core/testing';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { RoutePath } from '../../route-path';
 import { InputComponent } from '../../components/input/input.component';
 import { AuthApiService } from '../../services/auth-api/auth-api.service';
 import { AuthApiService as AuthApiServiceStub } from '../../services/auth-api/__mocks__/auth-api.service';
 import { SigninFormComponent } from './signin-form.component';
-import { RouterTestingModule } from '@angular/router/testing';
 import { signinFormTestIdSelectors } from 'calendar-test-ids';
 import { throwError } from 'rxjs';
 
