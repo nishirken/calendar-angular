@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { signinFormTestIds } from 'calendar-test-ids';
-import { RoutePath } from '../../route-path';
-import { ApiError } from '../../services/api.interfaces';
-import {
-  AuthCreds,
-  SigninErrorCode,
-} from '../../services/auth-api/auth-api.interfaces';
+import { routePaths } from '../../routing/routes-paths';
+import { AuthCreds } from '../../services/auth-api/auth-api.interfaces';
 import { AuthApiService } from '../../services/auth-api/auth-api.service';
 import { AuthFormComponent } from '../auth-form/auth-form.component';
 
@@ -30,8 +26,8 @@ export class SigninFormComponent extends AuthFormComponent {
 
   override submit = (creds: AuthCreds) => {
     this.authApiService.signin(creds).subscribe({
-      next: () => this.router.navigate([RoutePath.Week]),
-      error: (err: ApiError<SigninErrorCode>) => {
+      next: () => this.router.navigateByUrl(routePaths.week()),
+      error: () => {
         this.emailErrorMessage = errorMessage;
         this.passwordErrorMessage = errorMessage;
       },

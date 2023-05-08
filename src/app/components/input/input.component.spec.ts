@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, EventEmitter } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { InputComponent } from './input.component';
 

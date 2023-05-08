@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { signupFormTestIds } from 'calendar-test-ids';
-import { RoutePath } from '../../route-path';
+import { routePaths } from '../../routing/routes-paths';
 import {
   AuthCreds,
   PasswordInvalidErrorCode,
@@ -29,7 +29,7 @@ export class SignupFormComponent extends AuthFormComponent {
 
   override submit = (creds: AuthCreds) => {
     this.authApiService.signup(creds).subscribe({
-      next: () => this.router.navigate([RoutePath.Week]),
+      next: () => this.router.navigateByUrl(routePaths.week(new Date())),
       error: this.handleError,
     });
   };

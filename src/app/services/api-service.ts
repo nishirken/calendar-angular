@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { catchError, of } from 'rxjs';
-import { RoutePath } from '../app-routing.module';
+import { RoutePath } from '../routing/app-routing.module';
 import { ApiError } from './api.interfaces';
 
 @Injectable({
