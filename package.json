@@ -23,13 +23,13 @@
     "@angular/platform-browser": "^14.2.0",
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
-    "calendar-header": "github:nishirken/calendar-header#10570cb",
+    "calendar-header": "github:nishirken/calendar-header#master",
     "calendar-test-ids": "github:nishirken/calendar-test-ids#86715e3",
     "date-fns": "^2.29.3",
     "dayjs": "^1.11.7",
     "rxjs": "7.5.0",
     "tslib": "2.3.0",
-    "wired-elements": "github:nishirken/wired-elements#efc1835",
+    "wired-elements": "github:nishirken/wired-elements#master",
     "zone.js": "0.11.4"
   },
   "devDependencies": {
